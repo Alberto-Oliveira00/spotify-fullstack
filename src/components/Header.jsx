@@ -1,16 +1,19 @@
 import React from "react"; // eslint-disable-line no-unused-vars
-import logoSpotify from"../assets/logo/spotify-logo.png";
+import logoSpotify from "../assets/logo/spotify-logo.png";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="header">
-      <img src= {logoSpotify} alt="Logo do Spotify" />
+      <Link to="/">
+        <img src={logoSpotify} alt="Logo do Spotify" />
+      </Link>
 
-      <a className="header__link" href="#">
+      <Link to="/" className="header__link">
         <h1>Spotify</h1>
-      </a>
+      </Link>
     </div>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
