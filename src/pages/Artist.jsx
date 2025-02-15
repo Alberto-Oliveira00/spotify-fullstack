@@ -24,7 +24,7 @@ const Artist = () => {
           <FontAwesomeIcon 
             className="single-item__icon single-item__icon--artist" 
             icon={faCirclePlay} 
-        />
+          />
       </Link>
       </div>
     
