@@ -1,28 +1,50 @@
 import React from 'react' // eslint-disable-line no-unused-vars
 import Player from '../components/Player';
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { songsArray } from '../assets/database/songs';
+import { artistArray } from '../assets/database/artists';
 
 const Song = () => {
+  const { id } = useParams();
+
+
+  const {image, name, duration, artist, audio} = songsArray.filter(
+    (currentSongObj) => currentSongObj.id === Number(id))[0];
+
+  const artistObj = artistArray.filter(
+    (currentArtistObj) => currentArtistObj.name === artist)[0];
+
+    const songsArrayFromArtist = songsArray.filter((currentSongObj) => currentSongObj.artist === artistObj.name);
+
+    console.log(songsArrayFromArtist)
+    
+  const randomIndex = Math.floor(Math.random() * (songsArrayFromArtist.length - 1));
+  
+  const randomIdFromArtist = songsArrayFromArtist[randomIndex].id;
+  const randomId2FromArtist = songsArrayFromArtist[randomIndex].id;
+
   return (
     <div className="song">
       <div className="song__container">
         <div className="song__image-container">
-          <img src="https://i.scdn.co/image/ab67616d00001e022774b00531d558bc19e12a24" alt="Imagem da música" />
+          <img src={image} 
+          alt={`Imagem da música ${name}`} />
         </div>
       </div>
 
       <div className="song__bar">
-        <Link to="/artist/" className='song__artist-image'>
+        <Link to={`/artist/${artistObj.id}`} className='song__artist-image'>
           <img 
             width={75}
             height={75}
-            src="https://i.scdn.co/image/ab67616d00001e022774b00531d558bc19e12a24" alt="Imagem do artista" />
+            src={artistObj.image}
+            alt={`Imagem do artista ${artist}`} />
         </Link>
 
-        <Player />
+        <Player duration={duration} randomIdFromArtist={randomIdFromArtist} randomId2FromArtist={randomId2FromArtist} />
         <div>
-          <p className='song__name'>Última saudade - Ao vivo</p>
-          <p>Henrique & Juliano</p>
+          <p className='song__name'>{name}</p>
+          <p>{artist}</p>
         </div>
       </div>
     </div>
