@@ -9,20 +9,20 @@ Este projeto foi construído utilizando as seguintes tecnologias:
 ### Front-end:
 - React.js
 - Vite
-- Tailwind CSS (ou outra biblioteca de estilização)
 - React Router DOM
 - Axios
 
 ### Back-end:
 - Node.js
 - Express
-- PostgreSQL (ou MySQL)
+- PostgreSQL
 - Prisma ORM
 
 ## 📌 Funcionalidades
+- Principais artistas
+- Principais músicas
+- Músicas populares
 - Reprodução de músicas
-- Listagem de playlists
-- Busca de artistas, álbuns e faixas
 
 ## 🛠 Como Executar o Projeto
 
