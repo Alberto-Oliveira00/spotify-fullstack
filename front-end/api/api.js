@@ -2,6 +2,7 @@
 import "dotenv/config";
 import axios from "axios";
 
+// eslint-disable-next-line no-undef
 const { NODE_ENV } = process.env;
 const URL = NODE_ENV === "development" ? "http://localhost:3000/api" : "/api";
 
