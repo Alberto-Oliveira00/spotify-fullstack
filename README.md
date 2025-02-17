@@ -18,14 +18,11 @@ Este projeto foi construído utilizando as seguintes tecnologias:
 - Express
 - PostgreSQL (ou MySQL)
 - Prisma ORM
-- Autenticação via OAuth (Spotify API)
 
 ## 📌 Funcionalidades
-- Autenticação de usuário via Spotify API
 - Reprodução de músicas
 - Listagem de playlists
 - Busca de artistas, álbuns e faixas
-- Integração com API oficial do Spotify
 
 ## 🛠 Como Executar o Projeto
 
@@ -56,9 +53,6 @@ DATABASE_URL=postgres://usuario:senha@localhost:5432/spotify_clone
  npm install  # ou yarn install
  npm run dev  # ou yarn dev
 ```
-
-## 🔗 API do Spotify
-Para obter acesso à API do Spotify, cadastre seu aplicativo no [Spotify Developer Dashboard](https://developer.spotify.com/dashboard/).
 
 ## 📄 Licença
 Este projeto foi criado apenas para fins educacionais e **não** deve ser utilizado comercialmente.
