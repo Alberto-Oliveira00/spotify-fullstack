@@ -30,8 +30,8 @@ const ItemList = ({ title, items, itemsArray, path, idPath }) => {
               // name={currentObj.name}
               // image={currentObj.image}
               // banner={currentObj.banner}
-              idPath={idPath}
               {...currentObj}
+              idPath={idPath}
               key={`${title}-${index}`}
             />
           ))}
