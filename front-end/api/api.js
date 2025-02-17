@@ -1,5 +1,4 @@
-//Fetch ou Axios
-import "dotenv/config";
+// //Fetch ou Axios
 import axios from "axios";
 
 // const { NODE_ENV } = process.env;
